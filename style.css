@@ -1,0 +1,514 @@
+:root {
+    --gray-color: #f6f6f6;
+    --icon-color: #10cab7;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cairo', sans-serif;
+    font-family: 'Jomhuria', cursive;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f6f6f691;
+}
+
+.section {
+    padding: 40px 0;
+}
+
+.flex {
+    padding: 30px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+p {
+    opacity: .7;
+    font-size: .8em;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+/* Start Header */
+header.main-head {
+    padding: 15px 250px;
+    height: 60px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    width: 60px;
+    border-style: none;
+}
+
+.container .links {
+    position: relative;
+    top: -10px;
+}
+
+.links .one,
+.links .two {
+    position: absolute;
+    right: 0;
+}
+
+.links .one {
+    top: 0;
+}
+
+.links .one .links-span {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+}
+
+.links .one .links-span span {
+    position: absolute;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+}
+
+.links .one .links-span :first-child {
+    top: 0;
+}
+
+.links .one .links-span :nth-child(2) {
+    top: 8px;
+    width: 60%;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+
+.links .one .links-span :last-child {
+    top: 16px;
+}
+
+.links .two {
+    width: 180px;
+    top: 40px;
+    display: none;
+    z-index: 1;
+}
+
+.two .links-menu {
+    list-style: none;
+    background-color: var(--gray-color);
+}
+
+.two .links-menu a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+    border-bottom: 1px solid rgb(212, 211, 211);
+}
+
+.two .links-menu::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: -30px;
+    border: 15px solid;
+    border-color: transparent transparent var(--gray-color) transparent;
+}
+
+.links:hover .two {
+    display: block;
+}
+
+.links:hover .one .links-span :nth-child(2) {
+    width: 100%;
+}
+/* End Header */
+
+/* Start landing Section */
+.landing {
+    height: calc(100vh - 60px);
+    background-image: url("/Picture-1/landing.jpg");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+
+.landing h2 {
+    color: var(--icon-color);
+    font-size: 40px;
+    font-weight: 900;
+    /* margin-bottom: 20px; */
+}
+/* End landing Section */
+
+/* Start Information Article */
+.information {
+    display: flex;
+    justify-content: center;
+    margin: 60px 0;
+}
+
+.information .info {
+    padding: 20px;
+    width: 25%;
+    text-align: center;
+}
+
+.information .info .icon i {
+    font-size: 3em;
+    color: var(--icon-color);
+}
+
+.information .info h3 {
+    text-transform: capitalize;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.information :nth-child(2) {
+    margin: 0 5px;
+}
+/* End Information Article */
+
+/* Start Services Section */
+#services {
+    background-color: white;
+}
+
+.section article.title {
+    position: relative;
+}
+
+.section article.title h2 {
+    text-align: center;
+    font-size: 5em;
+    opacity: .070;
+    font-weight: 900;
+    letter-spacing: -5px;
+}
+
+.section article.title::before {
+    content: "Don't be busy, be productive";
+    position: absolute;
+    width: fit-content;
+    bottom: 17px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    opacity: .7;
+    letter-spacing: 1px;
+    font-size: .9em;
+}
+
+
+.info-services .careers::before {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 90%;
+    top: 5%;
+    right: 245px;
+    background-color: #2c4755;
+}
+
+.info-services .careers > div {
+    width: 20%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.info-services .careers .career-2 {
+    margin: 0 50px;
+}
+
+.info-services .careers h5 {
+    display: inline-block;
+    top: -5px;
+}
+
+.info-services .careers span {
+    margin-right: 15px;
+    font-size: 25px;
+    color: var(--icon-color);
+}
+
+.info-services .careers h5,
+.info-services .careers span {
+    position: relative;
+    left: -45px;
+}
+
+.info-services .careers .photo img {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    z-index: 1;
+}
+/* End Services Section */
+
+/* Start portfolio Section */
+.section article.title.portfolio::before {
+    content: "If you do it right, it will last forever.";
+}
+
+.portfolio .project {
+    background-color: white;
+    width: 22%;
+}
+
+.portfolio .project:nth-child(2) {
+    margin: 0 20px;
+}
+
+.portfolio .project-photo img {
+    width: 100%;
+}
+
+.portfolio .project h4,
+.portfolio .project p {
+    padding: 10px 0 0 15px;
+}
+/* End portfolio Section */
+
+/* Start about section */
+.section article.title.about::before {
+    content: 'Less is more work';
+}
+
+#about {
+    background-color: white;
+}
+
+.about.flex .about-photo {
+    width: 15%;
+    margin-right: 200px;
+}
+
+.about.flex .about-photo img {
+    width: 100%;
+    height: 350px;
+    position: relative;
+    z-index: 10;
+}
+
+.about.flex .about-discription {
+    width: 40%;
+}
+
+.about.flex .about-discription :first-child,
+.about.flex .about-discription :last-child {
+    position: relative;
+    line-height: 2.5;
+}
+
+.about.flex .about-discription :first-child {
+    top: 20px;
+}
+
+.about.flex .about-discription :last-child {
+    top: 80px;
+}
+
+.about.flex .about-discription :last-child:before {
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 1px;
+    top: -30px;
+    left: 0;
+    box-shadow: 0 0 0 .4px var(--icon-color) inset;
+    border: 1px solid;
+    border-color: black black transparent black;
+}
+
+article.about.flex {
+    position: relative;
+    margin: 30px 0;
+}
+
+.about.flex::before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 270px;
+    top: 0;
+    left: 440px;
+    border-width: 0 0 75px 70px;
+    border-style: solid;
+    border-color: transparent transparent var(--icon-color) var(--icon-color);
+}
+
+.about.flex::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 100%;
+    top: 0;
+    left: 240px;
+    background-color: #ebeced;
+}
+
+.about.flex .about-discription :first-child {
+    font-weight: bold;
+    opacity: 1;
+}
+
+/* End about section */
+
+/* Start contact section */
+.section article.title.contact::before {
+    content: 'We are born to create';
+}
+
+.section .contact-info {
+    margin: 50px 0;
+}
+
+.section .contact-info h2 {
+    text-align: center;
+    line-height: 2;
+    font-weight: 900;
+    font-size: 1.7em;
+    color: #2c4755;
+}
+
+.section .contact-info h2 div a{
+    text-decoration: none;
+    color: var(--icon-color);
+}
+
+.section .contact-info p {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.section .contact-info p i {
+    margin-left: 5px;
+}
+/* End contact section */
+
+/* Start Footer */
+#main-footer {
+    background-color: #2c4755;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+#main-footer span {
+    color: var(--icon-color);
+    font-weight: bold;
+}
+/* end Footer */
+
+@media (max-width: 400px) {
+    header.main-head {
+        padding: 15px 50px;
+    } 
+    .information,
+    .info-services .careers {
+        flex-wrap: wrap;
+    }
+    .info-services .careers span {
+        font-size: 35px;
+    }
+    .information .info {
+        width: 70%;
+    }
+    .section article.title h2 {
+        font-size: 4em;
+    }
+    .section article.title::before {
+        font-size: 1em;
+        opacity: .6em;
+        letter-spacing: normal;
+        bottom: 14px;
+    }
+    .info-services .careers > div {
+        width: 90%;
+    }
+    .info-services .careers h5 {
+        display: block;
+        margin: 10px 0;
+        font-size: 1.1em;
+    }
+    .info-services .careers::before {
+        content: '';
+        position: absolute;
+        width: 80px;
+        height: 25%;
+        top: 74%;
+        right: 20px;
+        background-color: #2c4755;
+    }
+    .info-services .careers > div > div {
+        text-align: center;
+    }
+    .info-services .careers h5,
+    .info-services .careers span {
+    position: initial;
+    }
+    p {
+        font-size: 1em;
+    }
+    .section .portfolio.flex {
+        flex-wrap: wrap;
+    }
+    .portfolio .project {
+        width: 90%;
+    }
+    .portfolio .project:nth-child(2) {
+        margin: 30px 0;
+    }
+    .about.flex::before,
+    .about.flex::after {
+        display: none;
+    }
+    .about.flex {
+        flex-wrap: wrap;
+    }
+    .about.flex .about-photo, 
+    .about.flex .about-discription {
+        width: 90%;
+        text-align: center;
+    }
+    .about.flex .about-photo {
+        margin: auto;
+    }
+    .about.flex .about-discription :last-child:before {
+        left: calc(50% - 100px);
+    }
+    .section .contact-info h2 {
+        font-size: 1.4em;
+    }
+    
+}
